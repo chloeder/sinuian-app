@@ -1,5 +1,12 @@
 <?php
 
+use App\Livewire\ShowHome;
+use App\Livewire\ShowSejarahDesa;
+use App\Livewire\ShowStruktur;
+use App\Livewire\ShowVisiMisi;
+use App\Livewire\ShowWilayahDesa;
+use App\Livewire\SuratOnline;
+use App\Livewire\WajibLapor;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ShowHome::class)->name('home');
+Route::get('/struktur-pemerintahan', ShowStruktur::class)->name('struktur.pemerintahan');
+Route::get('/visi-misi', ShowVisiMisi::class)->name('visi.misi');
+Route::get('/sejarah-desa', ShowSejarahDesa::class)->name('sejarah.desa');
+Route::get('/wilayah-desa', ShowWilayahDesa::class)->name('wilayah.desa');
+Route::get('/surat-online', SuratOnline::class)->name('surat.online');
+Route::get('/wajib-lapor', WajibLapor::class)->name('wajib.lapor');
