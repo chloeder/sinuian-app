@@ -13,10 +13,10 @@ return new class extends Migration
   {
     Schema::create('data_keuangans', function (Blueprint $table) {
       $table->id();
-      $table->string('kode_rekening');
+      $table->string('kategori');
       $table->string('uraian');
-      $table->string('volume');
-      $table->string('satuan');
+      $table->string('volume')->nullable();
+      $table->string('satuan')->nullable();
       $table->string('anggaran');
       $table->string('sumber_dana');
       $table->timestamps();

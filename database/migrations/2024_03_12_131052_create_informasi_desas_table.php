@@ -18,6 +18,8 @@ return new class extends Migration
       $table->string('tag');
       $table->string('cover');
       $table->bigInteger('views')->default(0);
+      $table->unsignedBigInteger('author');
+      $table->foreign('author')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
       $table->timestamps();
     });
   }
