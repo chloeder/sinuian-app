@@ -35,14 +35,17 @@
                                         <li>
                                             <div class="news-post image-post2">
                                                 <div class="post-gallery">
-                                                    <img src="{{ asset('storage/berkas/' . $item->cover) }}"
-                                                        alt="">
+                                                    <img src="{{ asset('storage/' . $item->cover) }}" alt="">
                                                     <div class="hover-box">
                                                         <div class="inner-hover">
-                                                            <a class="category-post"
-                                                                href="{{ route('informasi.kategori', $item->tag) }}">{{ $item->tag }}</a>
+                                                            <a class="category-post" href="#">
+                                                                {{ $item->tag }}
+                                                            </a>
+                                                            {{-- <a class="category-post"
+                                                                href="{{ route('informasi.kategori', $item->tag) }}">{{ $item->tag }}
+                                                            </a> --}}
                                                             <h2><a
-                                                                    href="{{ route('informasi', $item->slug) }}">{{ $item->judul }}</a>
+                                                                    href="{{ route('informasi', $item->id) }}">{{ $item->judul }}</a>
                                                             </h2>
                                                             <ul class="post-tags">
                                                                 <li>
@@ -51,7 +54,7 @@
                                                                 </li>
                                                                 <li>
                                                                     <i class="fa fa-user"></i>by <a
-                                                                        href="#">{{ $item->user->nama }}
+                                                                        href="#">{{ $item->user->name }}
                                                                     </a>
                                                                 </li>
 
@@ -72,10 +75,12 @@
                                     <div class="col-md-6">
                                         <ul class="list-posts">
                                             <li>
-                                                <img src="{{ asset('storage/berkas/' . $item->cover) }}" alt="">
+                                                <img src="{{ asset('storage/' . $item->cover) }}" alt="">
                                                 <div class="post-content">
-                                                    <h2><a href="{{ route('informasi', $item->slug) }}">{{ $item->judul }}
-                                                        </a></h2>
+                                                    <h2>
+                                                        <a
+                                                            href="{{ route('informasi', $item->id) }}">{{ $item->judul }}</a>
+                                                    </h2>
                                                     <ul class="post-tags">
                                                         <li>
                                                             <i
@@ -207,15 +212,14 @@
                                     <ul class="list-posts">
                                         @foreach ($populerPost as $item)
                                             <li>
-                                                <img src="{{ asset('storage/berkas/' . $item->cover) }}"
-                                                    alt="">
+                                                <img src="{{ asset('storage/' . $item->cover) }}" alt="">
                                                 <div class="post-content">
                                                     <h2><a
-                                                            href="{{ route('informasi', $item->slug) }}">{{ $item->judul }}</a>
+                                                            href="{{ route('informasi', $item->id) }}">{{ $item->judul }}</a>
                                                     </h2>
                                                     <ul class="post-tags">
                                                         <li>
-                                                            <i class="fa fa-user"></i>{{ $item->user->nama }}
+                                                            <i class="fa fa-user"></i>{{ $item->user->name }}
                                                         </li>
                                                         <li>
                                                             <i class="fa fa-clock-o"></i>
@@ -235,11 +239,10 @@
                                     <ul class="list-posts">
                                         @foreach ($informasiDesa as $item)
                                             <li>
-                                                <img src="{{ asset('storage/berkas/' . $item->cover) }}"
-                                                    alt="">
+                                                <img src="{{ asset('storage/' . $item->cover) }}" alt="">
                                                 <div class="post-content">
                                                     <h2><a
-                                                            href="{{ route('informasi', $item->slug) }}">{{ $item->judul }}</a>
+                                                            href="{{ route('informasi', $item->id) }}">{{ $item->judul }}</a>
                                                     </h2>
                                                     <ul class="post-tags">
                                                         <li> <i

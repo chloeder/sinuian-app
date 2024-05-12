@@ -16,7 +16,7 @@ return new class extends Migration
       $table->string('no_kk');
       $table->string('nama_lengkap');
       $table->string('alamat');
-      $table->string('ttl');
+      $table->string('tanggal_lahir');
       $table->string('jenis_kelamin');
       $table->timestamps();
     });

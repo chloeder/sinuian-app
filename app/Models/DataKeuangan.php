@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class DataKeuangan extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  protected $fillable = [
+    'uraian',
+    'kategori',
+    'volume',
+    'satuan',
+    'anggaran',
+    'sumber_dana',
+  ];
 }

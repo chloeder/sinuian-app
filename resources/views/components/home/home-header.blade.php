@@ -45,7 +45,7 @@
                             <a class="navbar-brand" href="{{ route('home') }}" wire:navigate>
                                 <img src="{{ asset('img/logo.png') }}" alt="LOGO">
                                 <div class="desa-description">
-                                    <h1>WEBISTE RESMI DESA SINUIAN</h1>
+                                    <h1>WEBSITE RESMI DESA SINUIAN</h1>
                                     <p>KEC.REMBOKEN KAB.MINAHASA PROV.SULAWESI UTARA</p>
                                 </div>
                             </a>
@@ -66,23 +66,35 @@
                                     <a class="{{ request()->routeIs('home') ? 'active' : '' }}"
                                         href="{{ route('home') }}" wire:navigate>Home</a>
                                 </li>
-                                <li>
-                                    <a class="{{ request()->routeIs('struktur.pemerintahan') ? 'active' : '' }}"
-                                        href="{{ route('struktur.pemerintahan') }}" wire:navigate>Struktur
-                                        Pemerintahan</a>
+                                <li class="drop-arrow drop"><a href="#">Tentang Desa</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a class="{{ request()->routeIs('struktur.pemerintahan') ? 'active' : '' }}"
+                                                href="{{ route('struktur.pemerintahan') }}" wire:navigate>Struktur
+                                                Pemerintahan</a>
+                                        </li>
+                                        <li>
+                                            <a class="{{ request()->routeIs('visi.misi') ? 'active' : '' }}"
+                                                href="{{ route('visi.misi') }}" wire:navigate>Visi
+                                                Misi</a>
+                                        </li>
+                                        <li>
+                                            <a class="{{ request()->routeIs('sejarah.desa') ? 'active' : '' }}"
+                                                href="{{ route('sejarah.desa') }}" wire:navigate>Sejarah Desa</a>
+                                        </li>
+                                        <li>
+                                            <a class="{{ request()->routeIs('wilayah.desa') ? 'active' : '' }}"
+                                                href="{{ route('wilayah.desa') }}" wire:navigate>Wilayah Desa</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <a class="{{ request()->routeIs('visi.misi') ? 'active' : '' }}"
-                                        href="{{ route('visi.misi') }}" wire:navigate>Visi
-                                        Misi</a>
+                                    <a class="{{ request()->routeIs('galeri.desa') ? 'active' : '' }}"
+                                        href="{{ route('galeri.desa') }}" wire:navigate>Galeri</a>
                                 </li>
                                 <li>
-                                    <a class="{{ request()->routeIs('sejarah.desa') ? 'active' : '' }}"
-                                        href="{{ route('sejarah.desa') }}" wire:navigate>Sejarah Desa</a>
-                                </li>
-                                <li>
-                                    <a class="{{ request()->routeIs('wilayah.desa') ? 'active' : '' }}"
-                                        href="{{ route('wilayah.desa') }}" wire:navigate>Wilayah Desa</a>
+                                    <a class="{{ request()->routeIs('umkm.desa') ? 'active' : '' }}"
+                                        href="{{ route('umkm.desa') }}" wire:navigate>UMKM Desa</a>
                                 </li>
                                 <li>
                                     <a class="{{ request()->routeIs('surat.online') ? 'active' : '' }}"
@@ -96,10 +108,10 @@
                                 </li>
 
                             </ul>
-                            <form class="navbar-form navbar-right" role="search">
+                            {{-- <form class="navbar-form navbar-right" role="search">
                                 <input type="text" id="search" name="search" placeholder="Search here">
                                 <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
-                            </form>
+                            </form> --}}
                         </div>
                         <!-- /.navbar-collapse -->
                     </div>
