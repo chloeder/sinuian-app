@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class DestinasiWisata extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  protected $fillable = [
+    'nama',
+    'lokasi',
+    'deskripsi',
+    'foto',
+  ];
 }

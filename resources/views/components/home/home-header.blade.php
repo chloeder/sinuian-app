@@ -14,7 +14,7 @@
                                     <li><a href="{{ route('filament.admin.auth.login') }}">Log In</a></li>
                                 </ul>
                             </div>
-                            <div class="col-md-3">
+                            {{-- <div class="col-md-3">
                                 <ul class="social-icons">
                                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -23,7 +23,7 @@
                                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

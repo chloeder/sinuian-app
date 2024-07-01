@@ -112,7 +112,7 @@
                     <!-- sidebar -->
                     <div class="sidebar large-sidebar theiaStickySidebar">
 
-                        <div class="widget social-widget">
+                        {{-- <div class="widget social-widget">
                             <div class="title-section">
                                 <h1><span>Stay Connected</span></h1>
                             </div>
@@ -138,7 +138,7 @@
                                     <span>Followers</span>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
 
                         <div class="widget features-slide-widget">
                             <div class="title-section">
