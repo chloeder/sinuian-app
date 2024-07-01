@@ -2,9 +2,11 @@
     <section class="ticker-news">
         <div class="container">
             <div class="ticker-news-box">
-                <span class="breaking-news">DESA SINUIAN</span>
+                <span class="breaking-news" style="font-size:16px">DESA SINUIAN</span>
                 <ul id="js-news">
-                    <li class="news-item">Selamat Datang di Website Resmi Desa SINUIAN</li>
+                    <li class="news-item">
+                        <span style="font-size:16px"> Selamat Datang di Website Resmi Desa SINUIAN</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -110,7 +112,7 @@
                     <!-- sidebar -->
                     <div class="sidebar large-sidebar theiaStickySidebar">
 
-                        <div class="widget social-widget">
+                        {{-- <div class="widget social-widget">
                             <div class="title-section">
                                 <h1><span>Stay Connected</span></h1>
                             </div>
@@ -136,7 +138,7 @@
                                     <span>Followers</span>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
 
                         <div class="widget features-slide-widget">
                             <div class="title-section">

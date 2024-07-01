@@ -14,7 +14,7 @@
                                     <li><a href="{{ route('filament.admin.auth.login') }}">Log In</a></li>
                                 </ul>
                             </div>
-                            <div class="col-md-3">
+                            {{-- <div class="col-md-3">
                                 <ul class="social-icons">
                                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -23,7 +23,7 @@
                                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -63,10 +63,10 @@
                             <ul class="nav navbar-nav navbar-left">
 
                                 <li>
-                                    <a class="{{ request()->routeIs('home') ? 'active' : '' }}"
+                                    <a class="{{ request()->routeIs('home') ? 'active' : '' }}" style="font-size: 16px;"
                                         href="{{ route('home') }}" wire:navigate>Home</a>
                                 </li>
-                                <li class="drop-arrow drop"><a href="#">Tentang Desa</a>
+                                <li class="drop-arrow drop"><a href="#" style="font-size: 16px;">Tentang Desa</a>
                                     <ul class="dropdown">
                                         <li>
                                             <a class="{{ request()->routeIs('struktur.pemerintahan') ? 'active' : '' }}"
@@ -86,25 +86,36 @@
                                             <a class="{{ request()->routeIs('wilayah.desa') ? 'active' : '' }}"
                                                 href="{{ route('wilayah.desa') }}" wire:navigate>Wilayah Desa</a>
                                         </li>
+                                        <li>
+                                            <a class="{{ request()->routeIs('apbd.desa') ? 'active' : '' }}"
+                                                href="{{ route('apbd.desa') }}" wire:navigate>APBD Desa</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a class="{{ request()->routeIs('galeri.desa') ? 'active' : '' }}"
-                                        href="{{ route('galeri.desa') }}" wire:navigate>Galeri</a>
+                                        style="font-size: 16px;" href="{{ route('galeri.desa') }}"
+                                        wire:navigate>Galeri</a>
                                 </li>
                                 <li>
                                     <a class="{{ request()->routeIs('umkm.desa') ? 'active' : '' }}"
-                                        href="{{ route('umkm.desa') }}" wire:navigate>UMKM Desa</a>
+                                        style="font-size: 16px;" href="{{ route('umkm.desa') }}" wire:navigate>UMKM
+                                        Desa</a>
                                 </li>
                                 <li>
                                     <a class="{{ request()->routeIs('surat.online') ? 'active' : '' }}"
-                                        href="{{ route('surat.online') }}" wire:navigate>Surat
+                                        style="font-size: 16px;" href="{{ route('surat.online') }}" wire:navigate>Surat
                                         Online</a>
                                 </li>
                                 <li>
                                     <a class="{{ request()->routeIs('wajib.lapor') ? 'active' : '' }}"
-                                        href="{{ route('wajib.lapor') }}" wire:navigate>Wajib
+                                        style="font-size: 16px;" href="{{ route('wajib.lapor') }}" wire:navigate>Wajib
                                         Lapor</a>
+                                </li>
+                                <li>
+                                    <a class="{{ request()->routeIs('destinasi.wisata') ? 'active' : '' }}"
+                                        style="font-size: 16px;" href="{{ route('destinasi.wisata') }}"
+                                        wire:navigate>Destinasi Wisata</a>
                                 </li>
 
                             </ul>
