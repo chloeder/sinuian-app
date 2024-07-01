@@ -18,7 +18,8 @@ return new class extends Migration
       $table->string('email');
       $table->string('pesan');
       $table->string('jenis_surat');
-      $table->string('status')->default('Proses');
+      $table->string('status')->nullable();
+      $table->string('file')->nullable();
       $table->timestamps();
     });
   }
