@@ -2,9 +2,11 @@
     <section class="ticker-news">
         <div class="container">
             <div class="ticker-news-box">
-                <span class="breaking-news">DESA SINUIAN</span>
+                <span class="breaking-news" style="font-size:16px">DESA SINUIAN</span>
                 <ul id="js-news">
-                    <li class="news-item">Selamat Datang di Website Resmi Desa SINUIAN</li>
+                    <li class="news-item">
+                        <span style="font-size:16px"> Selamat Datang di Website Resmi Desa SINUIAN</span>
+                    </li>
                 </ul>
             </div>
         </div>

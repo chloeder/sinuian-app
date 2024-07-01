@@ -1,6 +1,5 @@
-
 /* the default font in our template*/
-@font: 'Lato', sans-serif;
+@font: "Lato", sans-serif;
 
 /* default color skin */
 @skin-color: #f44336;
@@ -15,7 +14,7 @@
 @skin-color-transparent2: rgba(51, 163, 241, 0.8);
 
 /* titles text color */
-@color1: #222222; 
+@color1: #222222;
 
 /* (nav header list, pagination, some h2 color text, etc)*/
 @color2: #333333;
@@ -86,7 +85,7 @@
 }
 
 /* variable for radius corners*/
-.radius(@radius) { 
+.radius(@radius) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
     -o-border-radius: @radius;
@@ -94,7 +93,7 @@
 }
 
 /* variable for radius corners*/
-.radius-bottom-left(@radius) { 
+.radius-bottom-left(@radius) {
     -webkit-border-bottom-left-radius: @radius;
     -moz-border-bottom-left-radius: @radius;
     -o-border-bottom-left-radius: @radius;
@@ -102,7 +101,7 @@
 }
 
 /* variable for radius corners*/
-.radius-bottom-right(@radius) { 
+.radius-bottom-right(@radius) {
     -webkit-border-bottom-right-radius: @radius;
     -moz-border-bottom-right-radius: @radius;
     -o-border-bottom-right-radius: @radius;
@@ -118,7 +117,7 @@
 }
 
 /* variable for radius corners*/
-.radius-top-right(@radius) { 
+.radius-top-right(@radius) {
     -webkit-border-top-right-radius: @radius;
     -moz-border-top-right-radius: @radius;
     -o-border-top-right-radius: @radius;
@@ -126,23 +125,23 @@
 }
 
 /* variable for transitions*/
-.transition-faster { 
-    transition: all 0.10s ease-in-out;
-    -moz-transition: all 0.10s ease-in-out;
-    -webkit-transition: all 0.10s ease-in-out;
-    -o-transition: all 0.10s ease-in-out;
+.transition-faster {
+    transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
 }
 
 /* variable for transitions*/
-.transition { 
-    transition: all 0.20s ease-in-out;
-    -moz-transition: all 0.20s ease-in-out;
-    -webkit-transition: all 0.20s ease-in-out;
-    -o-transition: all 0.20s ease-in-out;
+.transition {
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 /* variable for transitions*/
-.transition2 { 
+.transition2 {
     transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -150,7 +149,7 @@
 }
 
 /* variable for transitions*/
-.transition3 { 
+.transition3 {
     transition: all 0.6s ease-in-out;
     -moz-transition: all 0.6s ease-in-out;
     -webkit-transition: all 0.6s ease-in-out;
@@ -158,7 +157,7 @@
 }
 
 /* variable for tranform grow elem scale*/
-.grow-transform(@scale) { 
+.grow-transform(@scale) {
     transform: scale(@scale);
     -webkit-transform: scale(@scale);
     -moz-transform: scale(@scale);
@@ -183,16 +182,16 @@
 
 /* animation duration  variable*/
 .animation-hover {
-    -webkit-animation-fill-mode:both;
-    -moz-animation-fill-mode:both;
-    -ms-animation-fill-mode:both;
-    -o-animation-fill-mode:both;
-    animation-fill-mode:both;
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    -ms-animation-duration:1s;
-    -o-animation-duration:1s;
-    animation-duration:1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-name: hovertrans;
     -moz-animation-name: hovertrans;
     -ms-animation-name: hovertrans;
@@ -203,24 +202,48 @@
 /* animate transform variable*/
 .animate-transform {
     @-webkit-keyframes hovertrans {
-        0% { .grow-transform(0); }    
-        50% { .grow-transform(1.07); }
-        100% { .grow-transform(1); }
+        0% {
+            .grow-transform(0);
+        }
+        50% {
+            .grow-transform(1.07);
+        }
+        100% {
+            .grow-transform(1);
+        }
     }
     @-moz-keyframes hovertrans {
-        0% { .grow-transform(0); }    
-        50% { .grow-transform(1.07); }
-        100% { .grow-transform(1); }
+        0% {
+            .grow-transform(0);
+        }
+        50% {
+            .grow-transform(1.07);
+        }
+        100% {
+            .grow-transform(1);
+        }
     }
     @-o-keyframes hovertrans {
-        0% { .grow-transform(0); }    
-        50% { .grow-transform(1.07); }
-        100% { .grow-transform(1); }
+        0% {
+            .grow-transform(0);
+        }
+        50% {
+            .grow-transform(1.07);
+        }
+        100% {
+            .grow-transform(1);
+        }
     }
     @keyframes hovertrans {
-        0% { .grow-transform(0); }    
-        50% { .grow-transform(1.07); }
-        100% { .grow-transform(1); }
+        0% {
+            .grow-transform(0);
+        }
+        50% {
+            .grow-transform(1.07);
+        }
+        100% {
+            .grow-transform(1);
+        }
     }
 }
 
@@ -272,5 +295,5 @@
     -webkit-transition-delay: @delay;
     -o-transition-delay: @delay;
     -moz-transition-delay: @delay;
-   transition-delay: @delay;
+    transition-delay: @delay;
 }
