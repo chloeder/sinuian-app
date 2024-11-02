@@ -38,7 +38,7 @@ class DestinasiWisataResource extends Resource
               ->maxLength(255),
             Forms\Components\FileUpload::make('foto')
               ->image()
-              ->imageEditor()
+              ->disk('public')
               ->required(),
           ]),
       ]);
@@ -54,7 +54,8 @@ class DestinasiWisataResource extends Resource
           ->searchable(),
         Tables\Columns\TextColumn::make('deskripsi')
           ->searchable(),
-        Tables\Columns\ImageColumn::make('foto'),
+        Tables\Columns\ImageColumn::make('foto')
+        ->disk('public'),
       ])
       ->filters([
         //
