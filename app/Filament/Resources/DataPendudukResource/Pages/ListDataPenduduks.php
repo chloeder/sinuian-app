@@ -20,11 +20,14 @@ class ListDataPenduduks extends ListRecords
   {
     return [
       ImportAction::make()
-        ->uniqueField('nama_lengkap')
+        ->label('Import Data Penduduk')
         ->fields([
           ImportField::make('no_kk')
             ->required()
             ->label('No. KK'),
+          ImportField::make('nik')
+            ->required()
+            ->label('NIK'),
           ImportField::make('nama_lengkap')
             ->required()
             ->label('Nama Lengkap'),
@@ -38,7 +41,7 @@ class ListDataPenduduks extends ListRecords
             ->required()
             ->label('Jenis Kelamin'),
         ]),
-      // Actions\CreateAction::make(),
+      Actions\CreateAction::make(),
     ];
   }
 }

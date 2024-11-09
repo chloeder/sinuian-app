@@ -127,7 +127,8 @@ class SuratResource extends Resource
                 ->searchable()
                 ->required(),
               Forms\Components\FileUpload::make('file')
-                ->imageEditor()
+                ->acceptedFileTypes(['application/pdf'])
+                ->required()
                 ->hidden(function (Surat $record): bool {
                   return $record->status !== 'Pending';
                 }),

@@ -10,6 +10,7 @@ class DataPenduduk extends Model
   use HasFactory;
 
   protected $fillable = [
+    'nik',
     'no_kk',
     'nama_lengkap',
     'alamat',

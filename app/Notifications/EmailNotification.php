@@ -42,7 +42,7 @@ class EmailNotification extends Notification
         ->line('Nama: ' . $this->record->nama)
         ->line('NIK: ' . $this->record->nik)
         ->line('Jenis Surat: ' . $this->record->jenis_surat)
-        ->line('Status: ' . $this->record->status)
+        ->line('Status: ' . 'Dalam Proses')
         ->line('Berkas anda telah kami terima, mohon menunggu untuk proses selanjutnya. Terima kasih.');
     } else {
       return (new MailMessage)
