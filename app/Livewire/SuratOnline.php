@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\DataPenduduk;
 use App\Models\Surat;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
@@ -13,6 +14,13 @@ class SuratOnline extends Component
   public function save()
   {
     $this->validate();
+
+    $existingNik = DataPenduduk::where('nik', $this->nik)->first();
+
+    if (!$existingNik) {
+      toastr()->error('NIK Tidak Ditemukan', 'Gagal');
+      return;
+    }
 
     Surat::create([
       'nama' => $this->nama,

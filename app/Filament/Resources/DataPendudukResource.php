@@ -23,21 +23,34 @@ class DataPendudukResource extends Resource
   {
     return $form
       ->schema([
-        Forms\Components\TextInput::make('no_kk')
-          ->required()
-          ->maxLength(255),
-        Forms\Components\TextInput::make('nama_lengkap')
-          ->required()
-          ->maxLength(255),
-        Forms\Components\TextInput::make('alamat')
-          ->required()
-          ->maxLength(255),
-        Forms\Components\TextInput::make('tanggal_lahir')
-          ->required()
-          ->maxLength(255),
-        Forms\Components\TextInput::make('jenis_kelamin')
-          ->required()
-          ->maxLength(255),
+        Forms\Components\Section::make('Form Tambah Data Penduduk')
+          ->description('Form untuk menambahkan data penduduk')
+          ->schema([
+            Forms\Components\TextInput::make('no_kk')
+              ->label('NO. KK')
+              ->required()
+              ->maxLength(255),
+            Forms\Components\TextInput::make('nik')
+              ->label('NIK')
+              ->required()
+              ->maxLength(255),
+            Forms\Components\TextInput::make('nama_lengkap')
+              ->label('NAMA LENGKAP')
+              ->required()
+              ->maxLength(255),
+            Forms\Components\TextInput::make('alamat')
+              ->label('ALAMAT')
+              ->required()
+              ->maxLength(255),
+            Forms\Components\TextInput::make('tanggal_lahir')
+              ->label('TANGGAL LAHIR')
+              ->required()
+              ->maxLength(255),
+            Forms\Components\TextInput::make('jenis_kelamin')
+              ->label('JENIS KELAMIN')
+              ->required()
+              ->maxLength(255),
+          ])
       ]);
   }
 
@@ -46,7 +59,10 @@ class DataPendudukResource extends Resource
     return $table
       ->columns([
         Tables\Columns\TextColumn::make('no_kk')
-          ->label('No. KK')
+          ->label('NO. KK')
+          ->searchable(),
+        Tables\Columns\TextColumn::make('nik')
+          ->label('NIK')
           ->searchable(),
         Tables\Columns\TextColumn::make('nama_lengkap')
           ->label('NAMA LENGKAP')
